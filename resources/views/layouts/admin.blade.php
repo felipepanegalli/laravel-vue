@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="{{asset('css/admin.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -22,6 +22,11 @@
 </head>
 <body>
     <div id="app">
+        <admin-menu></admin-menu>
+
+
+
+
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -77,11 +82,10 @@
                 </div>
             </div>
         </nav>
-
         @yield('content')
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="{{asset('build/admin.bundle.js')}}"></script>
 </body>
 </html>
